@@ -7,13 +7,13 @@ In this project, we configured a cloud-based machine learning production model, 
 ## Summary
 This dataset contains data about direct marketing campaigns of a banking institution. The marketing campaigns were based on phone calls. So we seek to predict if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
 
-First I executed an AutoML experiment using the Azure ML platform for training several kinds of models such as LightGBM, XGBoost, Logistic Regression, VotingEnsemble, among others algorithms. After we got the best model, I deployed it and I got the REST endpoint. I enabled logging through Application Insights service. Also we cover the Swagger documentation in order to get information of the REST endpoint. Then we saw how to consume the endpoint using the HTTP API and the authentication. Finally I created and published a pipeline using the Python SDK and I got the REST endpoint of the pipeline and with that we consumed the endpoint in order to execute the pipeline. All these steps we can see in the following architecture:
+First I executed an AutoML experiment using the Azure ML platform for training several kinds of models such as LightGBM, XGBoost, Logistic Regression, VotingEnsemble, among others algorithms. After we got the best model, I deployed it and I got the REST endpoint. I enabled logging through Application Insights service. Also we covered the Swagger documentation in order to get information of the REST endpoint. Then we saw how to consume the endpoint using the HTTP API and the authentication. Finally I created and published a pipeline using the Python SDK and I got the REST endpoint of the pipeline and with that we consumed the endpoint in order to execute the pipeline. All these steps we can see in the following architecture:
 
 ![architecture](/image/azmle_pj2_00.jpg)
 
 ## Automated ML Experiment
 
-We used the AutoML tool in order to train several models and get a best one with high accuracy. For this experiment I used the Bank Marketing dataset provided. I configured a compute cluster and setted up parameters like the classification task, the exit criterion to 1 hour and reduce the Concurrency to 5 wich it is a value lower than the number of nodes of the computer cluster. So after the experiment finished running we got a VotingEnsemble model as the best one. 
+We used the AutoML tool in order to train several models and get the best one with high accuracy. For this experiment I used the Bank Marketing dataset provided. I configured a compute cluster and setted up parameters like the classification task, the exit criterion to 1 hour and reduce the Concurrency to 5 wich it is a value lower than the number of nodes of the computer cluster. So after the experiment finished running we got a VotingEnsemble model as the best one. 
 
 ![dataset](/image/azmle_pj2_01.jpg)
 ![AutoML](/image/azmle_pj2_02.jpg)
@@ -45,24 +45,24 @@ In the information page of the model deployed, we can see it also give us an Swa
 
 ## Consume Model Endpoint
 
-We can consumed the model endpoint using the HTTP API. So I used the provided python script endpoint.py to interact with the trained model. I had to edit the script with the endpoint information such as the scoring URI, the primary Key for authentication and also specifie some input data. One executed, it returns the result of the prediction as we can see in the image.
+We can consumed the model endpoint using the HTTP API. So I used the provided python script endpoint.py to interact with the trained model. I had to edit the script with the endpoint information such as the scoring URI, the primary Key for authentication and also specify some input data. Once executed, it returns the result of the prediction as we can see in the image.
 
 ![Consume](/image/azmle_pj2_15.jpg)
 ![Consume](/image/azmle_pj2_16.jpg)
 
-Also we used the Apache bench tool in order to benchmark the endpoint. For this I executed the provided bash script and it returned some metrics like the response time and the number of failed requests. We can see the model takes aproximatly 194 ms per request and it didn't have failed requests.
+Also I used the Apache bench tool in order to benchmark the endpoint. For this, I executed the provided bash script and it returned some metrics like the response time and the number of failed requests. We can see the model takes approximately 194 ms per request and it didn't have failed requests.
 
 ![Consume](/image/azmle_pj2_17.jpg)
 
 ## Create, Publish and Consume a Pipeline
 
-For this part we used the Jupyter Notebook provided. In the notebook, firts we initialized the workspace, we specified the Azure ML experiment, attached the computed cluster, we loaded the Bank marketing dataset, we configured the AutoML using the AutoMLConfig class. We also used th AutoMLStep class to specifie the steps of the pipeline. The we created the pipeline and submitted the experiment. Once the experiment is completed, we can see diagram of the pipeline in the Azure ML studio. We can see the pipeline first has the bankmarketing dataset module followed by the AutoML module.
+For this part we used the Jupyter Notebook provided. In the notebook, firts we initialized the workspace, we specified the Azure ML experiment, attached the computed cluster, we loaded the Bank marketing dataset, we configured the AutoML using the AutoMLConfig class. We also used th AutoMLStep class to specify the steps of the pipeline. Then we created the pipeline and submitted the experiment. Once the experiment is completed, we can see the diagram of the pipeline in the Azure ML studio. We can see the pipeline first has the bankmarketing dataset module followed by the AutoML module.
 
 ![Pipeline](/image/azmle_pj2_24.jpg)
 ![Pipeline](/image/azmle_pj2_21.jpg)
 ![Pipeline](/image/azmle_pj2_18.jpg)
 
-Then we published the pipeline using the publish_pipeline method. It generated the Pipeline endpoint, in this case called "Bank Marketing  Train" and in the portal we can see the REST endpoint and its status wich is Active. 
+Then we published the pipeline using the publish_pipeline method. It generated the Pipeline endpoint, in this case called "Bank Marketing  Train" and in the portal we can see the REST endpoint and its status which is Active. 
 
 ![Pipeline](/image/azmle_pj2_19.jpg)
 ![Pipeline](/image/azmle_pj2_20.jpg)
