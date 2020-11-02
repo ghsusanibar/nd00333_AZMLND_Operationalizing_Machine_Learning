@@ -73,6 +73,6 @@ Once we got the Pipeline endpoint we can schedule it in order to run it every 24
 
 ## Screencast Video
 
-I recorded a screencast that shows the entire process of the working ML application. 
+Finally I recorded a screencast that shows the entire process of the working ML application. 
 
 [![Screencast](https://img.youtube.com/vi/ICra76yM6sc/0.jpg)](https://www.youtube.com/watch?v=ICra76yM6sc&feature=youtu.be&ab_channel=GROVERHERNANDOSUSANIBARSIPAN)
