@@ -1,0 +1,24 @@
+2020-11-02 01:56:48.890 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package azureml-train-automl missing from dependencies file.
+2020-11-02 01:56:48.892 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: azureml-train-automl==1.16.0.*
+2020-11-02 01:56:48.893 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package pandas missing from dependencies file.
+2020-11-02 01:56:48.893 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: pandas==0.25.1
+2020-11-02 01:56:48.894 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package psutil missing from dependencies file.
+2020-11-02 01:56:48.894 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: psutil>5.0.0,<6.0.0
+2020-11-02 01:56:48.894 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package scikit-learn missing from dependencies file.
+2020-11-02 01:56:48.895 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: scikit-learn==0.22.1
+2020-11-02 01:56:48.895 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package numpy missing from dependencies file.
+2020-11-02 01:56:48.895 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: numpy~=1.18.0
+2020-11-02 01:56:48.895 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package py-xgboost missing from dependencies file.
+2020-11-02 01:56:48.896 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: py-xgboost<=0.90
+2020-11-02 01:56:48.897 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package inference-schema missing from dependencies file.
+2020-11-02 01:56:48.905 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package fbprophet missing from dependencies file.
+2020-11-02 01:56:48.905 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: fbprophet==0.5
+2020-11-02 01:56:48.906 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package setuptools-git missing from dependencies file.
+2020-11-02 01:56:48.906 - INFO - 7486 - azureml.train.automl._azureautomlclient.modify_run_configuration:209 - Using installed version: setuptools-git==1.2
+2020-11-02 01:56:48.920 - INFO - 7486 - azureml.automl.core.dataset_utilities._save_datasets_to_json:148 - JSON serialization of input of type <class 'NoneType'> is un-supported.
+2020-11-02 01:56:48.929 - INFO - 7486 - azureml.train.automl._azureautomlclient._validate_input:624 - Start data validation.
+2020-11-02 01:56:50.900 - INFO - 7486 - azureml.train.automl._azureautomlclient._validate_input:635 - Validation service found the data has no errors.
+2020-11-02 02:29:17.749 - INFO - 7486 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping enabled: False
+2020-11-02 02:29:17.749 - INFO - 7486 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
+2020-11-02 02:29:17.750 - INFO - 7486 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping enabled: False
+2020-11-02 02:29:17.750 - INFO - 7486 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
