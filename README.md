@@ -94,4 +94,4 @@ We can improve this project in the future trying several options. For example in
 
 Finally I recorded a screencast that shows the entire process of the working ML application. 
 
-[![Screencast](https://img.youtube.com/vi/ICra76yM6sc/0.jpg)](https://www.youtube.com/watch?v=ICra76yM6sc&feature=youtu.be&ab_channel=GROVERHERNANDOSUSANIBARSIPAN)
+[![Screencast](https://img.youtube.com/vi/xeOwqYI7qrA/0.jpg)](https://youtu.be/xeOwqYI7qrA)
