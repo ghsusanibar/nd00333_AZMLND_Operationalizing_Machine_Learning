@@ -22,3 +22,39 @@
 2020-11-02 02:29:17.749 - INFO - 7486 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
 2020-11-02 02:29:17.750 - INFO - 7486 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping enabled: False
 2020-11-02 02:29:17.750 - INFO - 7486 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
+2020-11-05 23:30:10.947 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package azureml-train-automl missing from dependencies file.
+2020-11-05 23:30:10.948 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: azureml-train-automl==1.17.0.*
+2020-11-05 23:30:10.949 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package pandas missing from dependencies file.
+2020-11-05 23:30:10.949 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: pandas==0.25.1
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package psutil missing from dependencies file.
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: psutil>5.0.0,<6.0.0
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package scikit-learn missing from dependencies file.
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: scikit-learn==0.22.1
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package numpy missing from dependencies file.
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: numpy~=1.18.0
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package py-xgboost missing from dependencies file.
+2020-11-05 23:30:10.950 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: py-xgboost<=0.90
+2020-11-05 23:30:10.951 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package inference-schema missing from dependencies file.
+2020-11-05 23:30:10.951 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package fbprophet missing from dependencies file.
+2020-11-05 23:30:10.951 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:205 - Using pinned version: fbprophet==0.5
+2020-11-05 23:30:10.951 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:199 - Package setuptools-git missing from dependencies file.
+2020-11-05 23:30:10.951 - INFO - 25385 - azureml.train.automl._azureautomlclient.modify_run_configuration:209 - Using installed version: setuptools-git==1.2
+2020-11-05 23:30:10.963 - INFO - 25385 - azureml.automl.core.dataset_utilities._save_datasets_to_json:148 - JSON serialization of input of type <class 'NoneType'> is un-supported.
+2020-11-05 23:30:10.964 - INFO - 25385 - azureml.train.automl._azureautomlclient._validate_input:624 - Start data validation.
+2020-11-05 23:30:11.004 - CRITICAL - 25385 - azureml.train.automl._azureautomlclient.log_traceback:224 - Type: Unclassified
+Class: ValueError
+Message: experiment_id should not be None.
+Traceback:
+  File "_azureautomlclient.py", line 631, in _validate_input
+    validation_results = self._jasmine_client.post_validate_service(parent_run_dto)
+  File "jasmine_client.py", line 57, in post_validate_service
+    self._client.jasmine.validate_run_input, create_parent_run_dto)
+  File "experiment_client.py", line 261, in _execute_with_experimentid_arguments
+    raise ValueError("experiment_id should not be None.")
+
+ExceptionTarget: Unspecified
+2020-11-05 23:30:11.004 - WARNING - 25385 - azureml.train.automl._azureautomlclient._validate_input:639 - Validation service meet exceptions, continue training now.
+2020-11-06 00:27:09.549 - INFO - 25385 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping enabled: False
+2020-11-06 00:27:09.549 - INFO - 25385 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
+2020-11-06 00:27:09.550 - INFO - 25385 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping enabled: False
+2020-11-06 00:27:09.551 - INFO - 25385 - azureml.automl.runtime.featurization.data_transformer._logger_wrapper:81 - Feature sweeping timeout: 86400
