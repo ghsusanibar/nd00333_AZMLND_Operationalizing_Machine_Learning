@@ -1,5 +1,18 @@
 # Operationalizing Machine Learning
 
+Table of Contents
+=================
+  * [Overview](#overview)
+  * [Summary](#summary)
+  * [Automated ML Experiment](#automated-ml-experiment)
+  * [Model Deployment](#model-deployment)
+  * [Swagger Documentation](#swagger-documentation)
+  * [Consume Model Endpoint](#consume-model-endpoint)
+  * [Create and Publish a Pipeline](#create-and-publish-a-pipeline)
+  * [Future work](#future-work)
+  * [Screencast Video](#screencast-video)
+
+
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
 In this project, we configured a cloud-based machine learning production model, deployed it, and consumed it. Also we created, published, and consumed a pipeline.
@@ -65,7 +78,7 @@ Also I used the Apache bench tool in order to benchmark the endpoint. For this, 
 
 ![Consume](/image/azmle_pj2_17.jpg)
 
-## Create, Publish and Consume a Pipeline
+## Create and Publish a Pipeline
 
 For this part we used the Jupyter Notebook provided. In the notebook, firts we initialized the workspace, we specified the Azure ML experiment, attached the computed cluster, we loaded the Bank marketing dataset, we configured the AutoML using the AutoMLConfig class. We also used th AutoMLStep class to specify the steps of the pipeline. Then we created the pipeline and submitted the experiment. Once the experiment is completed, we can see the diagram of the pipeline in the Azure ML studio. We can see the pipeline first has the bankmarketing dataset module followed by the AutoML module.
 
