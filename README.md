@@ -13,9 +13,16 @@ First I executed an AutoML experiment using the Azure ML platform for training s
 
 ## Automated ML Experiment
 
-We used the AutoML tool in order to train several models and get the best one with high accuracy. For this experiment I used the Bank Marketing dataset provided. I configured a compute cluster and setted up parameters like the classification task, the exit criterion to 1 hour and reduce the Concurrency to 5 wich it is a value lower than the number of nodes of the computer cluster. So after the experiment finished running we got a VotingEnsemble model as the best one. 
+We used the AutoML tool in order to train several models and get the best one with high accuracy. For this experiment I used the Bank Marketing dataset provided. So the first task was register the dataset. I created the dataset from local file, then specify the currently blob storage for Datastore. We can enable the option of profile the dataset after creation in order to explore the data.
 
+![dataset](/image/azmle_pj2_26.jpg)
+![dataset](/image/azmle_pj2_27.jpg)
+![dataset](/image/azmle_pj2_28.jpg)
+![dataset](/image/azmle_pj2_29.jpg)
 ![dataset](/image/azmle_pj2_01.jpg)
+
+Then I configured a compute cluster and setted up parameters like the classification task, the exit criterion to 1 hour and reduce the Concurrency to 5 wich it is a value lower than the number of nodes of the computer cluster. So after the experiment finished running we got a VotingEnsemble model as the best one. 
+
 ![AutoML](/image/azmle_pj2_02.jpg)
 
 One advantege of the AutoML is that it also gives an explanation of the model. We can see the top importance features, in this case for example, the 'duration' variable turned out as the most important in order to predict if the product would be subscribed or not.
@@ -43,6 +50,10 @@ In the information page of the model deployed, we can see it also give us an Swa
 ![Swagger](/image/azmle_pj2_13.jpg)
 ![Swagger](/image/azmle_pj2_14.jpg)
 
+We can also see the model response like for example the 200 code response, the results of the prediction or maybe see some meassages in case we get some errors.
+
+![Swagger](/image/azmle_pj2_32.jpg)
+
 ## Consume Model Endpoint
 
 We can consumed the model endpoint using the HTTP API. So I used the provided python script endpoint.py to interact with the trained model. I had to edit the script with the endpoint information such as the scoring URI, the primary Key for authentication and also specify some input data. Once executed, it returns the result of the prediction as we can see in the image.
@@ -67,9 +78,17 @@ Then we published the pipeline using the publish_pipeline method. It generated t
 ![Pipeline](/image/azmle_pj2_19.jpg)
 ![Pipeline](/image/azmle_pj2_20.jpg)
 
-Once we got the Pipeline endpoint we can schedule it in order to run it every 24 hours for example. For this we used the ScheduleRecurrence class from the Azure SDK. Finally we can consume the Pipeline endpoint using the HTTP via Python SDK. So at the end of the notebook we can see how to monitor the status of the pipeline run using RunDetails Widget.
+Once we got the Pipeline endpoint we can schedule it in order to run it every 24 hours for example. For this we used the ScheduleRecurrence class from the Azure SDK. Finally we can consume the Pipeline endpoint using the HTTP via Python SDK. We can see in the following images the results after triggered the pipeline using the published pipeline REST endpoint. Also at the end of the notebook we can see how to monitor the status of the pipeline run using RunDetails Widget.
 
 ![Pipeline](/image/azmle_pj2_23.jpg)
+![Pipeline](/image/azmle_pj2_33.jpg)
+
+## Future work
+
+We can improve this project in the future trying several options. For example in the AutoML experiment we can Enable Deep Learning option for the Classification task in order to improve the Feature Engineering, we can give more training job time for the experiment and also we can specify the models which can be used for Experiments under Blocked model. In the process of creation of the pipeline, we can also perform several other tasks aside from training a model such as Data Preparation, Validation, Bactch scoring and combine tasks.
+
+![Pipeline](/image/azmle_pj2_31.jpg)
+![Pipeline](/image/azmle_pj2_34.jpg)
 
 ## Screencast Video
 
